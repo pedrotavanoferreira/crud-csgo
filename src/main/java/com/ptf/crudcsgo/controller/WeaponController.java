@@ -2,6 +2,7 @@ package com.ptf.crudcsgo.controller;
 
 import com.ptf.crudcsgo.service.WeaponService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,11 @@ public class WeaponController {
     @GetMapping
     public String getWeapon(){
         return this.weaponService.getWeapon();
+    }
+
+    @PostMapping
+    public String postWeapon(){
+        return this.weaponService.postWeapon();
     }
 
 }
