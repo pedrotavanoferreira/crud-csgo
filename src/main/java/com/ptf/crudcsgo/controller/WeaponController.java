@@ -1,10 +1,7 @@
 package com.ptf.crudcsgo.controller;
 
 import com.ptf.crudcsgo.service.WeaponService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/weapon")
@@ -24,6 +21,16 @@ public class WeaponController {
     @PostMapping
     public String postWeapon(){
         return this.weaponService.postWeapon();
+    }
+
+    @DeleteMapping
+    public String deleteWeapon(){
+        return this.weaponService.deleteWeapon();
+    }
+
+    @PutMapping
+    public String putWeapon(){
+        return this.weaponService.putWeapon();
     }
 
 }

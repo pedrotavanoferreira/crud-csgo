@@ -17,4 +17,17 @@ public class WeaponService {
         weaponList.add("Bayonet Doppler");
         return "Bayonet Doppler criada";
     }
+
+    public String deleteWeapon() {
+        weaponList.remove("Bayonet Doppler");
+        return "Bayonet Doppler deletada";
+    }
+
+    public String putWeapon() {
+        var weapon = weaponList.get(0);
+        weapon = "Karambit";
+        weaponList.remove(0);
+        weaponList.add(weapon);
+        return "Arma alterada";
+    }
 }
