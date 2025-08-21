@@ -1,5 +1,6 @@
 package com.ptf.crudcsgo.controller;
 
+import com.ptf.crudcsgo.dto.WeaponDTO;
 import com.ptf.crudcsgo.service.WeaponService;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class WeaponController {
     }
 
     @PostMapping
-    public String postWeapon(){
+    public String postWeapon(@RequestBody WeaponDTO weaponDTO){
         return this.weaponService.postWeapon();
     }
 
