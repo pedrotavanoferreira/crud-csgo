@@ -1,5 +1,6 @@
 package com.ptf.crudcsgo.service;
 
+import com.ptf.crudcsgo.dto.WeaponDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -13,9 +14,9 @@ public class WeaponService {
         return "dragonlore";
     }
 
-    public String postWeapon() {
-        weaponList.add("Bayonet Doppler");
-        return "Bayonet Doppler criada";
+    public String postWeapon(WeaponDTO weaponDTO) {
+        weaponList.add(weaponDTO.getWeapon());
+        return "Arma criada";
     }
 
     public String deleteWeapon() {

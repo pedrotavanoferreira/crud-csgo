@@ -21,7 +21,7 @@ public class WeaponController {
 
     @PostMapping
     public String postWeapon(@RequestBody WeaponDTO weaponDTO){
-        return this.weaponService.postWeapon();
+        return this.weaponService.postWeapon(weaponDTO);
     }
 
     @DeleteMapping
