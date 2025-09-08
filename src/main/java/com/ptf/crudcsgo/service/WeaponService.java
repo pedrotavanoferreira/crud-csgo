@@ -4,14 +4,13 @@ import com.ptf.crudcsgo.dto.WeaponDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Deque;
 
 @Service
 public class WeaponService {
     private ArrayList<String> weaponList = new ArrayList<>();
 
     public String getWeapon(){
-        return "dragonlore";
+        return weaponList.toString();
     }
 
     public String postWeapon(WeaponDTO weaponDTO) {
@@ -20,8 +19,8 @@ public class WeaponService {
     }
 
     public String deleteWeapon() {
-        weaponList.remove("Bayonet Doppler");
-        return "Bayonet Doppler deletada";
+        weaponList.clear();
+        return "Armas deletadas";
     }
 
     public String putWeapon() {
