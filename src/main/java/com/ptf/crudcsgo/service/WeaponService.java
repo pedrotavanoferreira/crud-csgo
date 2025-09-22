@@ -23,11 +23,11 @@ public class WeaponService {
         return "Armas deletadas";
     }
 
-    public String putWeapon() {
-        var weapon = weaponList.get(0);
-        weapon = "Karambit";
-        weaponList.remove(0);
-        weaponList.add(weapon);
+    public String putWeapon(String weaponUpdate) {
+//        var weapon = weaponList.get(weaponUpdate);
+//        weapon = "Karambit";
+//        weaponList.remove(0);
+//        weaponList.add(weapon);
         return "Arma alterada";
     }
 }

@@ -30,8 +30,8 @@ public class WeaponController {
     }
 
     @PutMapping
-    public String putWeapon(){
-        return this.weaponService.putWeapon();
+    public String putWeapon(String weaponUpdate){
+        return this.weaponService.putWeapon(weaponUpdate);
     }
 
 }
