@@ -24,10 +24,13 @@ public class WeaponService {
     }
 
     public String putWeapon(String weaponUpdate) {
-//        var weapon = weaponList.get(weaponUpdate);
-//        weapon = "Karambit";
-//        weaponList.remove(0);
-//        weaponList.add(weapon);
+        if (weaponList == null || weaponList.isEmpty()) {
+            return "Lista de armas está vazia ou não inicializada";
+        }
+
+        // Atualiza a primeira arma com a nova
+        weaponList.set(0, weaponUpdate); // substitui diretamente
+
         return "Arma alterada";
     }
 }
