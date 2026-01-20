@@ -5,7 +5,7 @@ import com.ptf.crudcsgo.service.WeaponService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/weapon")
+@RequestMapping(value = "/weapons")
 public class WeaponController {
 
     private WeaponService weaponService;
@@ -15,7 +15,7 @@ public class WeaponController {
     }
 
     @GetMapping
-    public String getWeapon(){
+    public WeaponDTO getWeapon(){
         return this.weaponService.getWeapon();
     }
 
@@ -30,7 +30,7 @@ public class WeaponController {
     }
 
     @PutMapping
-    public String putWeapon(String weaponUpdate){
+    public String putWeapon(WeaponDTO weaponUpdate){
         return this.weaponService.putWeapon(weaponUpdate);
     }
 

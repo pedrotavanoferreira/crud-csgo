@@ -7,14 +7,14 @@ import java.util.ArrayList;
 
 @Service
 public class WeaponService {
-    private ArrayList<String> weaponList = new ArrayList<>();
+    private ArrayList<WeaponDTO> weaponList = new ArrayList<>();
 
-    public String getWeapon(){
-        return weaponList.toString();
+    public WeaponDTO getWeapon(){
+        return weaponList.get(0);
     }
 
     public String postWeapon(WeaponDTO weaponDTO) {
-        weaponList.add(weaponDTO.getWeapon());
+        weaponList.add(weaponDTO);
         return "Arma criada";
     }
 
@@ -23,7 +23,7 @@ public class WeaponService {
         return "Armas deletadas";
     }
 
-    public String putWeapon(String weaponUpdate) {
+    public String putWeapon(WeaponDTO weaponUpdate) {
         if (weaponList == null || weaponList.isEmpty()) {
             return "Lista de armas está vazia ou não inicializada";
         }
