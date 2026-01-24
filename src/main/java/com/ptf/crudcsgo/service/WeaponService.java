@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class WeaponService {
     private ArrayList<WeaponDTO> weaponList = new ArrayList<>();
 
-    public WeaponDTO getWeapon(){
-        return weaponList.get(0);
+    public ArrayList<WeaponDTO> getWeapon(){
+        return weaponList;
     }
 
     public String postWeapon(WeaponDTO weaponDTO) {

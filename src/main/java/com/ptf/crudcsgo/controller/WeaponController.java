@@ -4,6 +4,8 @@ import com.ptf.crudcsgo.dto.WeaponDTO;
 import com.ptf.crudcsgo.service.WeaponService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping(value = "/weapons")
 public class WeaponController {
@@ -15,7 +17,7 @@ public class WeaponController {
     }
 
     @GetMapping
-    public WeaponDTO getWeapon(){
+    public ArrayList<WeaponDTO> getWeapon(){
         return this.weaponService.getWeapon();
     }
 
