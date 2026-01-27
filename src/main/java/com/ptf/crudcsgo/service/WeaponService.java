@@ -28,8 +28,15 @@ public class WeaponService {
             return "Lista de armas está vazia ou não inicializada";
         }
 
-        // Atualiza a primeira arma com a nova
-        weaponList.set(0, weaponUpdate); // substitui diretamente
+        for (WeaponDTO weapon : weaponList) {
+            if (weapon.getId() == weaponUpdate.getId()) {
+                weapon.setName(weaponUpdate.getName());
+                weapon.setType(weaponUpdate.getType());
+                weapon.setSkin(weaponUpdate.getSkin());
+
+                return "Arma alterada com sucesso";
+            }
+        }
 
         return "Arma alterada";
     }

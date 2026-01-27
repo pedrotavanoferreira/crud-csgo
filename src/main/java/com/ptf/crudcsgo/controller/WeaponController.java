@@ -26,7 +26,7 @@ public class WeaponController {
         return this.weaponService.postWeapon(weaponDTO);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public String deleteWeapon(){
         return this.weaponService.deleteWeapon();
     }
