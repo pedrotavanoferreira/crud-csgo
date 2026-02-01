@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping(value = "/weapons")
 public class WeaponController {
